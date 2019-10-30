@@ -1,0 +1,14 @@
+[
+  {
+    "tip": "Tip number 1",
+    "description": "Description"
+  },
+  {
+    "tip": "Tip number 2",
+    "description": "Description 2"
+  },
+  {
+    "tip": "Tip number 3",
+    "description": "Description 3"
+  }
+]
