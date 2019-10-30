@@ -11,6 +11,8 @@ import UIKit
 
 class TipsViewController: UIViewController {
     
+    let service: Servicing
+    
     let internalView = UIView()
     lazy var stackView: UIStackView = {
         let stack = UIStackView()
@@ -19,7 +21,8 @@ class TipsViewController: UIViewController {
         return stack
     }()
     
-    init() {
+    init(service: Servicing = Service()) {
+        self.service = service
         super.init(nibName: nil, bundle: nil)
         let image = UIImage(systemName: "pencil.and.outline")
         self.tabBarItem = UITabBarItem(title: "Tips", image: image, selectedImage: image)
@@ -51,17 +54,9 @@ class TipsViewController: UIViewController {
             stackView.addArrangedSubview(view)
         }
         
-        
-        if let url = URL(string: "https://api.myjson.com/bins/yfua8") {
-           URLSession.shared.dataTask(with: url) { data, response, error in
-              if let data = data {
-                 if let jsonString = String(data: data, encoding: .utf8) {
-                    print(jsonString)
-                 }
-               }
-           }.resume()
+        service.getTips { tips in
+            print(tips)
         }
-        
     }
     
     override func loadView() {

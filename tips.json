@@ -1,14 +1,17 @@
 [
   {
-    "tip": "Tip number 1",
+    "id": 1,
+    "title": "Tip number 1",
     "description": "Description"
   },
   {
-    "tip": "Tip number 2",
+    "id": 2,
+    "title": "Tip number 2",
     "description": "Description 2"
   },
   {
-    "tip": "Tip number 3",
+    "id": 3,
+    "title": "Tip number 3",
     "description": "Description 3"
   }
 ]

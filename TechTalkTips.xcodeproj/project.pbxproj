@@ -13,6 +13,8 @@
 		416CB7D12369BD4B00078156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416CB7D02369BD4B00078156 /* Assets.xcassets */; };
 		416CB7D42369BD4B00078156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416CB7D22369BD4B00078156 /* LaunchScreen.storyboard */; };
 		416CB7E02369D1F100078156 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416CB7DF2369D1F100078156 /* MainTabController.swift */; };
+		416F80D0236A314D002927E7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416F80CF236A314D002927E7 /* Service.swift */; };
+		416F80D2236A318A002927E7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416F80D1236A318A002927E7 /* Models.swift */; };
 		41C20A5C2369F64D00DC6772 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C20A5B2369F64D00DC6772 /* TipsViewController.swift */; };
 		41C20A5E2369F65E00DC6772 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C20A5D2369F65E00DC6772 /* SettingsViewController.swift */; };
 		41C20A622369FAD200DC6772 /* Experimenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C20A612369FAD200DC6772 /* Experimenting.swift */; };
@@ -33,6 +35,8 @@
 		416CB7D32369BD4B00078156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		416CB7D52369BD4B00078156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		416CB7DF2369D1F100078156 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		416F80CF236A314D002927E7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		416F80D1236A318A002927E7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		41C20A5B2369F64D00DC6772 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		41C20A5D2369F65E00DC6772 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		41C20A612369FAD200DC6772 /* Experimenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experimenting.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		416CB7C62369BD4A00078156 /* TechTalkTips */ = {
 			isa = PBXGroup;
 			children = (
+				416F80CE236A3131002927E7 /* Util */,
 				416CB7DD2369BD9100078156 /* FeaturesGroup */,
 				416CB7DC2369BD8200078156 /* FeaturePoint */,
 				416CB7DB2369BD7700078156 /* Experiments */,
@@ -122,6 +127,15 @@
 				41C20A5F2369FA6A00DC6772 /* Tips */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		416F80CE236A3131002927E7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				416F80CF236A314D002927E7 /* Service.swift */,
+				416F80D1236A318A002927E7 /* Models.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		41C20A5F2369FA6A00DC6772 /* Tips */ = {
@@ -213,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41C20A642369FAF400DC6772 /* Experiments.swift in Sources */,
+				416F80D0236A314D002927E7 /* Service.swift in Sources */,
 				41C20A6E2369FC8300DC6772 /* MainFeaturePoint.swift in Sources */,
 				41C20A662369FB4200DC6772 /* FeatureFactory.swift in Sources */,
 				41C20A6A2369FBC200DC6772 /* SettingsFeatureFactory.swift in Sources */,
@@ -220,6 +235,7 @@
 				416CB7CC2369BD4A00078156 /* ViewController.swift in Sources */,
 				41C20A5C2369F64D00DC6772 /* TipsViewController.swift in Sources */,
 				416CB7C82369BD4A00078156 /* AppDelegate.swift in Sources */,
+				416F80D2236A318A002927E7 /* Models.swift in Sources */,
 				41C20A682369FB5200DC6772 /* FeaturePoint.swift in Sources */,
 				416CB7E02369D1F100078156 /* MainTabController.swift in Sources */,
 				416CB7CA2369BD4A00078156 /* SceneDelegate.swift in Sources */,
