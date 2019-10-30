@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+class MainFeaturePoint: FeaturePoint<UIViewController> {
+    
+    override var featureFactories: [FeatureFactory<UIViewController>] {
+        return [TipsFeatureFactory(),
+                SettingsFeatureFactory()]
+    }
+    
+}
+

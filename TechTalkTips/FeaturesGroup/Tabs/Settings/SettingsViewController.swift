@@ -12,11 +12,19 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     let internalView = UIView()
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        let image = UIImage(systemName: "gear")
+        self.tabBarItem = UITabBarItem(title: "Settings", image: image, selectedImage: image)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(), selectedImage: nil)
-        tabBarController?.tabBar.isHidden = false
         self.view.backgroundColor = .white
     }
     

@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
-class TipsFeatureFactory: FeatureFactory {
+class TipsFeatureFactory: FeatureFactory<UIViewController> {
     
     init() {
-        super.init { () -> FeatureType in
+        super.init {
             return TipsViewController()
         }
     }

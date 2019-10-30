@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
-class SettingsFeatureFactory: FeatureFactory {
+class SettingsFeatureFactory: FeatureFactory<UIViewController> {
     
     init() {
-        super.init { () -> FeatureType in
+        super.init {
             return SettingsViewController()
         }
     }

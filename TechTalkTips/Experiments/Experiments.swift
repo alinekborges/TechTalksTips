@@ -7,3 +7,7 @@
 //
 
 import Foundation
+enum Experiments: String, ExperimentKeying {
+    case settings
+    case tips
+}

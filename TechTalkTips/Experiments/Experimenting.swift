@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol FeatureType {}
+protocol ExperimentKeying {}
+
+protocol CachedExperimenting {
+    func isOn(_ name: ExperimentKeying) -> Bool
+}

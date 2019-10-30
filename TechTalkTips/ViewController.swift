@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let internalView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.tabBarItem = UITabBarItem(title: "title", image: UIImage(), selectedImage: nil)
+        tabBarController?.tabBar.isHidden = false
+        self.view.backgroundColor = .white
     }
-
-
+    
+    override func loadView() {
+        view = internalView
+    }
+    
 }
-
