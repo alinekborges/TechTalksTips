@@ -14,7 +14,7 @@ protocol Servicing {
 
 class Service: Servicing {
     
-    private let url = "https://raw.githubusercontent.com/alinekborges/TechTalksTips/master/tips.json"
+    private let url = "https://raw.githubusercontent.com/alinekborges/TechTalksTips/master/MainTips.json"
     
     func getTips(completion: @escaping ([Tip])->Void) {
         guard let url = URL(string: self.url) else { return completion([]) }
@@ -22,11 +22,13 @@ class Service: Servicing {
             guard let data = data else { return completion([])}
             let decoder = JSONDecoder()
             
-            do {
-                let tip = try decoder.decode([Tip].self, from: data)
-                print(tip.count)
-            } catch {
-                print(error.localizedDescription)
+            DispatchQueue.main.async {
+                do {
+                    let tips = try decoder.decode([Tip].self, from: data)
+                    completion(tips)
+                } catch {
+                    completion([])
+                }
             }
         }.resume()
     }
